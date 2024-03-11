@@ -30,7 +30,7 @@ class Mahasiswa {
 int main() {
     Mahasiswa mhs;
     mhs.setNama("Agnes Refilina Fiska");
-    mhs.setNim(2311102126LL); // LL menandakan bahwa angka ini adalah long long
+    mhs.setNim( 2311102126LL ); // LL menandakan bahwa angka ini adalah long long
     mhs.setProdi("Teknik Informatika");
     cout << "Nama Mahasiswa: " << mhs.getNama() << endl;
     cout << "NIM: " << mhs.getNim() << endl;
