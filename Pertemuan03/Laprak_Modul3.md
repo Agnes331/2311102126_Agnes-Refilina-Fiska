@@ -745,8 +745,8 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot Output Unguided 1](Output-unguided-1_Agnes_mod3.png)
-![Screenshot Output Unguided 1](Output-unguided-1_Agnes_mod3(2).png)
+![Screenshot Output Unguided 1](Output-unguided-1_Agnes-mod3.png)
+![Screenshot Output Unguided 1](Output-unguided-1_Agnes-mod3(2).png)
 
 Program di atas merupakan program C++ yang mengimplementasikan sebuah linked list. Linked list ini digunakan untuk menyimpan data mahasiswa, yang terdiri dari nama dan usia. Program ini memiliki beberapa fungsi untuk menangani operasi terhadap linked list, seperti menambah, menghapus, dan mengubah data.
 
@@ -768,7 +768,7 @@ Toko Skincare Purwokerto
 8.	Exit
 Pada menu 7, tampilan akhirnya akan menjadi seperti dibawah
 ini :
-![Screenshot Soal Unguided 2](Soal_unguided-2_Agnes(2).png)]
+![Screenshot Soal Unguided 2](Soal_unguided-2_Agnes(2).png)
 
 ```C++
 #include <iostream> // mengatur input output
@@ -1035,9 +1035,9 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot Output Unguided 2](Output-unguided-2_Agnes-mod3.png)
-![Screenshot Output Unguided 2](Output-unguided-2_Agnes-mod3(2).png)
-![Screenshot Output Unguided 2](Output-unguided-2_Agnes-mod3(3).png)
+![Screenshot Output Unguided 2](Output-unguided-2-Agnes-mod3.png)
+![Screenshot Output Unguided 2](Output-unguided-2-Agnes-mod3(2).png)
+![Screenshot Output Unguided 2](Output-unguided-2-Agnes-mod3(3).png)
 
 Program di atas adalah implementasi dari struktur data Doubly Linked List dalam bahasa C++. Program ini menciptakan sebuah toko skincare sederhana dengan beberapa fungsionalitas dasar seperti menambah, menghapus, mengubah, dan menampilkan data produk skincare.Setiap operasi dapat diakses melalui menu yang disediakan dalam sebuah loop utama. Ini adalah contoh implementasi dasar dari struktur data double linked list untuk aplikasi pengelolaan data produk dalam sebuah toko.
 
@@ -1046,4 +1046,4 @@ Praktikum SINGLEANDDOUBLELINKEDLIST menunjukkan bahwa linked list adalah struktu
 
 ## Referensi
 [1] Shofyann Hanief,et al., Konsep Algoritme dan Aplikasinya dalam Bahasa Pemrograman C++. Yogyakarta: Andi Publisher, 2020.
-[2]Joseph Teguh Santoso, Struktur Data dan Algoritma (Bagian 1). Semarang: Yayasan Prima Agus Teknik, 2021. [2] Jurusan Teknik Elektro – Universitas Negeri Malang - 2016
+[2]Joseph Teguh Santoso, Struktur Data dan Algoritma (Bagian 1). Semarang: Yayasan Prima Agus Teknik, 2021. [2] Jurusan Teknik Elektro – Universitas Negeri Malang - 2016.
