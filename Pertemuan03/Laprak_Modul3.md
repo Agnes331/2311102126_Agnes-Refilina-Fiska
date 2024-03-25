@@ -745,8 +745,8 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot Output Unguided 1](Output-unguided-1_Agnes-mod3.png)
-![Screenshot Output Unguided 1](Output-unguided-1_Agnes-mod3(2).png)
+![Screenshot Output Unguided 1](Output-unguided-1-Agnes-mod3.png)
+![Screenshot Output Unguided 1](Output-unguided-1-Agnes-mod3(2).png)
 
 Program di atas merupakan program C++ yang mengimplementasikan sebuah linked list. Linked list ini digunakan untuk menyimpan data mahasiswa, yang terdiri dari nama dan usia. Program ini memiliki beberapa fungsi untuk menangani operasi terhadap linked list, seperti menambah, menghapus, dan mengubah data.
 
