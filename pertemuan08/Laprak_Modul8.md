@@ -4,20 +4,24 @@
 ## Dasar Teori
 
 Sequential search dan binary search adalah dua jenis algoritma pencarian yang sering digunakan pada program untuk menelusuri suatu data yang dicari.
+
      · Sequential Search
        1. Algoritma ini membandingkan setiap elemen array satu per satu secara berurutan, mulai dari elemen    pertama, 
           sampai elemen yang dicari ditemukan atau sampai semua elemen diperiksa.
        2. Jika elemen ditemukan, ia mengembalikan indeksnya, jika tidak -1.
        3. Contoh: Linear Search.
+       
  ![Screenshot](Gambar1.ALGORITMA_SEARCHING.png)
 
     · Binary Search
+    
        1. Algoritma ini hanya dapat digunakan pada data yang sudah terurut.
        2. Algoritma ini membagi data menjadi dua bagian setiap kali, dan memeriksa apakah elemen yang dicari berada di 
           setengah kiri atau setengah kanan.
        3. Apabila ditemukan kecocokan nilai maka akan mengembalikan output, jika tidak pencarian akan terus berlanjut 
           hingga akhir dari pembagian jumlah elemen tersebut.
        4. Contoh: Binary Search.
+       
  ![Screenshot](Gambar2.ALGORITMA_SEARCHING.png)
 
 Perbedaan antara sequential search dan binary search:
