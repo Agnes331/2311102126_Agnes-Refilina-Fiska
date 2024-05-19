@@ -5,29 +5,39 @@
 
 Sequential search dan binary search adalah dua jenis algoritma pencarian yang sering digunakan pada program untuk menelusuri suatu data yang dicari.
      · Sequential Search
-       1. Algoritma ini membandingkan setiap elemen array satu per satu secara berurutan, mulai dari elemen    pertama, sampai elemen yang dicari ditemukan atau sampai semua elemen diperiksa.
+       1. Algoritma ini membandingkan setiap elemen array satu per satu secara berurutan, mulai dari elemen    pertama, 
+          sampai elemen yang dicari ditemukan atau sampai semua elemen diperiksa.
        2. Jika elemen ditemukan, ia mengembalikan indeksnya, jika tidak -1.
        3. Contoh: Linear Search.
  ![Screenshot](Gambar1.ALGORITMA_SEARCHING.png)
 
     · Binary Search
        1. Algoritma ini hanya dapat digunakan pada data yang sudah terurut.
-       2. Algoritma ini membagi data menjadi dua bagian setiap kali, dan memeriksa apakah elemen yang dicari berada di setengah kiri atau setengah kanan.
-       3. Apabila ditemukan kecocokan nilai maka akan mengembalikan output, jika tidak pencarian akan terus berlanjut hingga akhir dari pembagian jumlah elemen tersebut.
+       2. Algoritma ini membagi data menjadi dua bagian setiap kali, dan memeriksa apakah elemen yang dicari berada di 
+          setengah kiri atau setengah kanan.
+       3. Apabila ditemukan kecocokan nilai maka akan mengembalikan output, jika tidak pencarian akan terus berlanjut 
+          hingga akhir dari pembagian jumlah elemen tersebut.
        4. Contoh: Binary Search.
  ![Screenshot](Gambar2.ALGORITMA_SEARCHING.png)
 
 Perbedaan antara sequential search dan binary search:
 
- 1. Sequential search membandingkan setiap elemen array satu per satu secara berurutan, sedangkan binary search membagi data menjadi dua bagian setiap kali dan memeriksa apakah elemen yang dicari berada di setengah kiri atau setengah kanan.
- 2. Sequential search dapat digunakan pada data yang tidak terurut, sedangkan binary search hanya dapat digunakan pada data yang sudah terurut.
- 3. Binary search lebih efisien dari sisi waktu dibandingkan dengan sequential search karena binary search hanya memerlukan logaritma basis 2 dari jumlah data yang dicari, sedangkan sequential search memerlukan waktu yang lebih lama karena harus memeriksa setiap elemen satu per satu secara berurutan.
+ 1. Sequential search membandingkan setiap elemen array satu per satu secara berurutan, sedangkan binary search membagi 
+    data menjadi dua bagian setiap kali dan memeriksa apakah elemen yang dicari berada di setengah kiri atau setengah kanan.
+ 2. Sequential search dapat digunakan pada data yang tidak terurut, sedangkan binary search hanya dapat digunakan pada data 
+    yang sudah terurut.
+ 3. Binary search lebih efisien dari sisi waktu dibandingkan dengan sequential search karena binary search hanya memerlukan 
+    logaritma basis 2 dari jumlah data yang dicari, sedangkan sequential search memerlukan waktu yang lebih lama karena 
+    harus memeriksa setiap elemen satu per satu secara berurutan.
  4. Namun, binary search lebih rumit daripada sequential search dan memerlukan data yang sudah terurut.
 
 Berikut adalah beberapa hal yang perlu dipertimbangkan saat menggunakan Algoritma Searching:
 
-   · Kapan menggunakan sequential search: Data tidak terurut atau dalam keadaan acak, Jumlah data yang dicari relatif kecil, Data yang dicari berada di awal atau tengah array.
-   · Kapan menggunakan binary search: Data sudah terurut, Jumlah data yang dicari relatif besar, Data yang dicari berada di akhir array atau tidak ada dalam array.
+   · Kapan menggunakan sequential search: Data tidak terurut atau dalam keadaan acak, Jumlah data yang dicari relatif 
+     kecil, Data yang dicari berada di awal atau tengah array
+     
+   · Kapan menggunakan binary search: Data sudah terurut, Jumlah data yang dicari relatif besar, Data yang dicari berada di 
+     akhir array atau tidak ada dalam array.
 
 Namun, perlu diingat bahwa binary search lebih efisien dari sisi waktu dibandingkan dengan sequential search karena binary search hanya memerlukan logaritma basis 2 dari jumlah data yang dicari, sedangkan sequential search memerlukan waktu yang lebih lama karena harus memeriksa setiap elemen satu per satu secara berurutan.
 
@@ -36,6 +46,9 @@ Namun, perlu diingat bahwa binary search lebih efisien dari sisi waktu dibanding
 ### 1. [Buatlah sebuah project dengan menggunakan sequential search sederhana untuk melakukan pencarian data.]
 
 ```C++
+/*
+oleh Agnes Refilina Fiska - 2311102126
+*/
 #include <iostream>
 using namespace std;
 
@@ -71,6 +84,9 @@ Program di atas merupakan contoh program sequential search sederhana di C++ yang
 ### 2. [Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search.]
 
 ```C++
+/*
+oleh Agnes Refilina Fiska - 2311102126
+*/
 #include <iostream>
 #include <iomanip>
 #include <conio.h>
@@ -149,6 +165,9 @@ Program di atas merupakan contoh program binary search di C++ yang digunakan unt
 ### 1. [Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!]
 
 ```C++
+/*
+oleh Agnes Refilina Fiska - 2311102126
+*/
 #include <iostream>
 using namespace std;
 
@@ -206,13 +225,29 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot Output Unguided 1](output_unguided1_Agnes1.png)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Program di atas adalah implementasi dari algoritma pencarian biner (binary search) dalam bahasa C++. Program ini bertujuan untuk mencari indeks dari suatu huruf yang dimasukkan pengguna dalam sebuah kalimat yang juga dimasukkan oleh pengguna.
+
+Algoritma dalam program ini terdiri dari dua tahap utama:
+
+  - Pengurutan Huruf: Sebelum melakukan pencarian biner, huruf-huruf dalam kalimat diurutkan secara alfabetis menggunakan 
+    algoritma selection sort. Hal ini diperlukan karena pencarian biner hanya dapat dilakukan pada data yang sudah 
+    diurutkan.
+
+  - Pencarian Biner: Setelah pengurutan selesai, program akan mencari huruf yang dimasukkan pengguna dalam kalimat yang 
+    sudah diurutkan. Pencarian dilakukan dengan menggunakan algoritma pencarian biner (binary search). Jika huruf 
+    ditemukan, program akan mengembalikan indeks pertama di mana huruf tersebut ditemukan. Jika tidak ditemukan, program 
+    akan memberikan pesan bahwa huruf tidak ditemukan dalam kalimat.
+
+Program ini memberikan pengguna kemampuan untuk menemukan indeks dari suatu huruf dalam kalimat dengan cepat dan efisien, berkat penggunaan algoritma pencarian biner dan pengurutan selection sort.
 
 ### 2. [Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!]
 
 ```C++
+/*
+oleh Agnes Refilina Fiska - 2311102126
+*/
 #include <iostream>
 #include <cctype>
 using namespace std;
@@ -262,13 +297,30 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot Output Unguided 2](output_unguided2_Agnes2.png)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Program di atas adalah program sederhana yang digunakan untuk menghitung jumlah huruf vokal, huruf konsonan, dan total karakter dalam sebuah kalimat yang dimasukkan oleh pengguna. Program ini menggunakan fungsi-fungsi bawaan dari C++ untuk mengidentifikasi huruf vokal dan huruf konsonan dalam kalimat.
+
+Langkah-langkah utama dalam program ini adalah sebagai berikut:
+
+  1. Input Kalimat: Program meminta pengguna untuk memasukkan sebuah kalimat.
+  2. Penghitungan Huruf Vokal: Program menggunakan fungsi countVowels untuk menghitung jumlah huruf vokal dalam kalimat 
+     yang dimasukkan pengguna. Fungsi ini melakukan iterasi melalui setiap karakter dalam kalimat dan memeriksa apakah 
+     karakter tersebut adalah huruf vokal. Jika ya, maka jumlah huruf vokal akan ditambah.
+  3. Penghitungan Huruf Konsonan: Program menggunakan fungsi countConsonants untuk menghitung jumlah huruf konsonan dalam 
+     kalimat yang dimasukkan pengguna. Fungsi ini juga melakukan iterasi melalui setiap karakter dalam kalimat, namun kali 
+     ini memeriksa apakah karakter tersebut adalah huruf konsonan. Jika ya, maka jumlah huruf konsonan akan ditambah.
+  4. Penghitungan Total Karakter: Program juga menghitung jumlah total karakter dalam kalimat yang dimasukkan pengguna 
+     menggunakan fungsi length() dari objek string.
+
+Setelah proses penghitungan selesai, program akan mencetak jumlah huruf vokal, huruf konsonan, dan total karakter dalam kalimat tersebut. Program ini memberikan pengguna informasi tentang struktur dan komposisi dari kalimat yang dimasukkan.
 
 ### 3. [Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!]
 
 ```C++
+/*
+oleh Agnes Refilina Fiska - 2311102126
+*/
 #include <iostream>
 using namespace std;
 
@@ -301,9 +353,24 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot Output Unguided 3](output_unguided3_Agnes3.png)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Program di atas adalah implementasi sederhana dari fungsi untuk menghitung berapa kali suatu angka muncul dalam sebuah array. Program ini menggunakan fungsi hitungAngka yang melakukan iterasi melalui setiap elemen array untuk mencari kemunculan angka target.
+
+Langkah-langkah utama dalam program ini adalah sebagai berikut:
+
+  - Deklarasi Variabel: Program mendeklarasikan beberapa variabel yang diperlukan, termasuk size untuk menyimpan ukuran 
+    array, array yang merupakan array yang berisi sekumpulan angka, dan target yang merupakan angka yang ingin dicari dalam 
+    array.
+
+  - Penghitungan Kemunculan Angka: Program memanggil fungsi hitungAngka untuk menghitung berapa kali angka target muncul 
+    dalam array. Fungsi ini melakukan iterasi melalui setiap elemen array dan membandingkan dengan angka target. Setiap 
+    kali angka target ditemukan, counter akan ditambah.
+
+  - Output: Setelah proses penghitungan selesai, program mencetak jumlah kemunculan angka target dalam array. Pesan ini 
+    disertai dengan judul yang jelas dan pemformatan yang rapi.
+
+Program ini memberikan pengguna kemampuan untuk dengan cepat dan mudah menghitung jumlah kemunculan suatu angka dalam sebuah array. Ini dapat berguna dalam berbagai aplikasi yang memerlukan analisis atau pengolahan data.
 
 ## Kesimpulan
 Setelah mempelajari algoritma pencarian sequential search dan binary search, kami dapat menyimpulkan bahwa sequential search adalah metode pencarian yang melakukan perbandingan elemen secara berurutan dari awal hingga elemen yang dicari ditemukan. Metode ini direkomendasikan untuk digunakan pada data yang relatif sedikit. Di sisi lain, binary search adalah metode pencarian yang dapat digunakan pada data yang terurut secara teratur. Binary search bekerja pada asumsi bahwa data dalam array telah diurutkan sebelumnya. Algoritma ini memiliki kompleksitas waktu Ο(log n), di mana n adalah jumlah elemen.
