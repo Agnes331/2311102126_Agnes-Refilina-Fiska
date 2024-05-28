@@ -8,7 +8,7 @@ Graph dan tree adalah dua konsep yang berbeda dalam ilmu komputer. Berikut adala
 
  Representasi graph dengan linked list adalah salah satu cara merepresentasikan graf dalam bentuk struktur data linked list. Pada representasi ini, setiap simpul pada graf direpresentasikan sebagai node pada linked list, dan setiap busur pada graf direpresentasikan sebagai elemen pada linked list tersebut. Dalam representasi ini, setiap node pada linked list memiliki dua bagian, yaitu data dan pointer ke node berikutnya pada linked list. Data pada setiap node merepresentasikan simpul pada graf, sedangkan pointer pada setiap node merepresentasikan busur pada graf yang terhubung dengan simpul tersebut. Representasi graph dengan linked list dapat digunakan untuk merepresentasikan graf berarah maupun tidak berarah, serta graf berbobot maupun tidak berbobot. Representasi ini memiliki keuntungan dalam penggunaan memori, karena hanya menyimpan busur yang ada pada graf, sehingga lebih efisien untuk graf yang sangat besar. Namun, representasi ini memiliki kelemahan dalam akses data, karena pencarian data pada linked list membutuhkan waktu yang lebih lama dibandingkan dengan representasi graph lainnya seperti adjacency matrix.
  
-![Screenshot](Gambar1.Graph and Tree.png)
+![Screenshot](Gambar_Graph_and_Tree.png)
 
 ## Tree
  Tree adalah struktur data khusus dari graph yang tidak memiliki siklus (cycle). Tree terdiri dari simpul-simpul yang terhubung dengan busur-busur, namun tidak ada dua simpul yang terhubung dengan lebih dari satu busur. Tree digunakan untuk merepresentasikan hierarki, seperti struktur direktori pada sistem operasi, atau hubungan antara kelas dalam suatu program.
@@ -821,11 +821,11 @@ int main()
 }
 ```
 #### Output:
-![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
-![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
-![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
-![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
-![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
+![Screenshot Output Unguided 2](output_unguided2_Agnes1.png)
+![Screenshot Output Unguided 2](output_unguided2_Agnes2.png)
+![Screenshot Output Unguided 2](output_unguided2_Agnes3.png)
+![Screenshot Output Unguided 2](output_unguided2_Agnes4.png)
+![Screenshot Output Unguided 2](output_unguided2_Agnes5.png)
 
 Program di atas adalah implementasi dari pohon pencarian biner (Binary Search Tree) dalam bahasa pemrograman C++. Program ini menyediakan beberapa operasi dasar yang dapat dilakukan pada pohon pencarian biner, seperti penambahan (insertion), penelusuran (traversal) in-order, pre-order, dan post-order, serta penghapusan (removal) node.
 
