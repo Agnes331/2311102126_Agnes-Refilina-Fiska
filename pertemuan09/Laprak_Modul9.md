@@ -1,31 +1,13 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
-<p align="center">Arvinanto Bahtiar</p>
-
-## Dasar Teori
-
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
-
-## Guided 
-
-### 1. [Nama Topik]
-
-```C++
-#include <iostream>
-using namespace std;
-
-int main() {
-    cout << "ini adalah file code guided praktikan" << endl;
-    return 0;
-}# <h1 align="center">Laporan Praktikum Modul Graph and Tree</h1>
+# <h1 align="center">Laporan Praktikum Modul 9 Graph and Tree</h1>
 <p align="center">Agnes Refilina Fiska - 2311102126 </p>
 
 ## Dasar Teori
-
 Graph dan tree adalah dua konsep yang berbeda dalam ilmu komputer. Berikut adalah penjelasan singkat mengenai keduanya:
 ## Graph
  Graph adalah struktur data yang terdiri dari simpul (node) dan busur (edge) yang menghubungkan simpul-simpul tersebut. Graph digunakan untuk merepresentasikan hubungan antara objek atau entitas dalam suatu sistem. Graph dapat digunakan untuk memodelkan berbagai macam masalah, seperti jaringan sosial, rute perjalanan, dan sebagainya
 
  Representasi graph dengan linked list adalah salah satu cara merepresentasikan graf dalam bentuk struktur data linked list. Pada representasi ini, setiap simpul pada graf direpresentasikan sebagai node pada linked list, dan setiap busur pada graf direpresentasikan sebagai elemen pada linked list tersebut. Dalam representasi ini, setiap node pada linked list memiliki dua bagian, yaitu data dan pointer ke node berikutnya pada linked list. Data pada setiap node merepresentasikan simpul pada graf, sedangkan pointer pada setiap node merepresentasikan busur pada graf yang terhubung dengan simpul tersebut. Representasi graph dengan linked list dapat digunakan untuk merepresentasikan graf berarah maupun tidak berarah, serta graf berbobot maupun tidak berbobot. Representasi ini memiliki keuntungan dalam penggunaan memori, karena hanya menyimpan busur yang ada pada graf, sehingga lebih efisien untuk graf yang sangat besar. Namun, representasi ini memiliki kelemahan dalam akses data, karena pencarian data pada linked list membutuhkan waktu yang lebih lama dibandingkan dengan representasi graph lainnya seperti adjacency matrix.
+ 
 ![Screenshot](Gambar1.Graph and Tree.png)
 
 ## Tree
@@ -33,16 +15,19 @@ Graph dan tree adalah dua konsep yang berbeda dalam ilmu komputer. Berikut adala
 
 Operasi pemrograman pada tree meliputi beberapa hal, antara lain:
 
- 1. Traverse: operasi kunjungan terhadap node-node dalam pohon. Terdapat beberapa jenis traverse, seperti in-order, pre-order, dan post-order traverse. In-order traverse dilakukan dengan cara mengunjungi simpul kiri, mencetak simpul yang dikunjungi, dan mengunjungi simpul kanan. Pre-order traverse dilakukan dengan cara mencetak simpul yang dikunjungi, mengunjungi simpul kiri, dan mengunjungi simpul kanan. Post-order traverse dilakukan dengan cara mengunjungi simpul kiri, mengunjungi simpul kanan, dan mencetak simpul yang dikunjungi.
-
- 2. Insert: operasi untuk menambahkan simpul baru ke dalam tree. Pada operasi ini, simpul baru ditempatkan pada posisi yang tepat sesuai dengan aturan tree.
-
- 3. Delete: operasi untuk menghapus simpul dari tree. Pada operasi ini, simpul yang dihapus harus diganti dengan simpul lain yang sesuai dengan aturan tree.
-
- 4. Search: operasi untuk mencari simpul pada tree. Pada operasi ini, simpul dicari dengan cara menelusuri tree dari simpul root hingga simpul yang dicari ditemukan.
-
- 5. Balance: operasi untuk menjaga keseimbangan tree. Pada operasi ini, tree diubah sehingga memiliki ketinggian yang seimbang dan meminimalkan waktu akses data.
-
+ 1. Traverse: operasi kunjungan terhadap node-node dalam pohon. Terdapat beberapa jenis traverse, seperti in-order, pre- 
+     order, dan post-order traverse. In-order traverse dilakukan dengan cara mengunjungi simpul kiri, mencetak simpul yang 
+     dikunjungi, dan mengunjungi simpul kanan. Pre-order traverse dilakukan dengan cara mencetak simpul yang dikunjungi, 
+     mengunjungi simpul kiri, dan mengunjungi simpul kanan. Post-order traverse dilakukan dengan cara mengunjungi simpul 
+     kiri, mengunjungi simpul kanan, dan mencetak simpul yang dikunjungi.
+ 2. Insert: operasi untuk menambahkan simpul baru ke dalam tree. Pada operasi ini, simpul baru ditempatkan pada posisi yang 
+    tepat sesuai dengan aturan tree.
+ 3. Delete: operasi untuk menghapus simpul dari tree. Pada operasi ini, simpul yang dihapus harus diganti dengan simpul 
+    lain yang sesuai dengan aturan tree.
+ 4. Search: operasi untuk mencari simpul pada tree. Pada operasi ini, simpul dicari dengan cara menelusuri tree dari simpul 
+    root hingga simpul yang dicari ditemukan.
+ 5. Balance: operasi untuk menjaga keseimbangan tree. Pada operasi ini, tree diubah sehingga memiliki ketinggian yang 
+    seimbang dan meminimalkan waktu akses data.
 
 ## Guided 
 
@@ -50,10 +35,35 @@ Operasi pemrograman pada tree meliputi beberapa hal, antara lain:
 
 ```C++
 #include <iostream>
+#include <iomanip>
+
 using namespace std;
+string simpul[7] = {
+    "Ciamis", "Bandung", "Bekasi", "Tasikmalaya", "Cianjur", "Purwokerto", "Yogyakarta"
+};
+int busur[7][7] = {
+    {0, 7, 8, 0, 0, 0, 0},
+    {0, 0, 5, 0, 0, 15, 0},
+    {0, 6, 0, 0, 5, 0, 0},
+    {0, 5, 0, 0, 2, 4, 0},
+    {23, 0, 0, 10, 0, 0, 8},
+    {0, 0, 0, 0, 7, 0, 3},
+    {0, 0, 0, 0, 9, 4, 0}
+};
+
+void tampilGraph() {
+    for (int baris=0; baris<7; baris++) {
+        cout << " " << setiosflags(ios::left) << setw(15) << simpul[baris] << " : ";
+        for (int kolom=0; kolom<7; kolom++) {
+            if (busur[baris][kolom] != 0) {
+                cout << " " << simpul[kolom] << "(" << busur[baris][kolom] << ") ";
+            }
+        } cout << endl;
+    }
+}
 
 int main() {
-    cout << "ini adalah file code guided praktikan" << endl;
+    tampilGraph();
     return 0;
 }
 ```
@@ -505,14 +515,15 @@ int main()
         }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot Output Unguided 1](output_unguided1_Agnes1.png)
 
 Program ini digunakan untuk menginput dan menampilkan graf berbentuk adjacency list. Graf ini terdiri dari simpul dan busur, serta bobot dari setiap busur. Program ini meminta pengguna untuk memasukkan jumlah simpul, nama simpul, dan bobot antar simpul.
 
 1. Program pertama meminta pengguna untuk memasukkan jumlah simpul.
 2. Kemudian, program meminta pengguna untuk memasukkan nama simpul.
 3. Selanjutnya, program meminta pengguna untuk memasukkan bobot antar simpul.
-4. Setelah pengguna memasukkan semua data, program menampilkan grafik dalam bentuk daftar kedekatan. Graf ini terdiri dari nama simpul dan bobot antar simpul.
+4. Setelah pengguna memasukkan semua data, program menampilkan grafik dalam bentuk daftar kedekatan. Graf ini terdiri dari 
+   nama simpul dan bobot antar simpul.
 5. Graf ditampilkan dalam format tabel, dengan nama simpul sebagai judul baris dan bobot antar simpul sebagai isi baris.
 
 Dengan demikian, program ini dapat digunakan untuk menginput dan menampilkan graf berbentuk adjacency list.
@@ -810,18 +821,26 @@ int main()
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
+![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
+![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
+![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
+![Screenshot Output Unguided 2](output_unguided1_Agnes2.png)
 
 Program di atas adalah implementasi dari pohon pencarian biner (Binary Search Tree) dalam bahasa pemrograman C++. Program ini menyediakan beberapa operasi dasar yang dapat dilakukan pada pohon pencarian biner, seperti penambahan (insertion), penelusuran (traversal) in-order, pre-order, dan post-order, serta penghapusan (removal) node.
 
 Kelas BinarySearchTree memiliki beberapa properti dan metode:
 
 1. Properti root yang menunjukkan akar dari pohon pencarian biner.
-2. Metode insert(int a) digunakan untuk menambahkan node baru ke pohon. Node baru akan ditempatkan sesuai aturan    pohon pencarian biner, yaitu nilai yang lebih kecil dari akar akan ditempatkan di sebelah kiri, dan nilai yang lebih besar akan ditempatkan di sebelah kanan.
-3. Metode remove(int a) digunakan untuk menghapus node dari pohon. Operasi penghapusan dilakukan dengan mempertimbangkan beberapa kasus, seperti node yang memiliki satu anak atau dua anak.
-4. Metode print_inorder(), print_preorder(), dan print_postorder() digunakan untuk melakukan penelusuran in-order, pre-order, dan post-order pada pohon.
-5. Metode inorder(nodeTree *b), preorder(nodeTree *b), dan postorder(nodeTree *b) merupakan implementasi rekursif dari penelusuran in-order, pre-order, dan post-order pada pohon.
-
+2. Metode insert(int a) digunakan untuk menambahkan node baru ke pohon. Node baru akan ditempatkan sesuai aturan    pohon 
+   pencarian biner, yaitu nilai yang lebih kecil dari akar akan ditempatkan di sebelah kiri, dan nilai yang lebih besar 
+   akan ditempatkan di sebelah kanan.
+3. Metode remove(int a) digunakan untuk menghapus node dari pohon. Operasi penghapusan dilakukan dengan mempertimbangkan 
+   beberapa kasus, seperti node yang memiliki satu anak atau dua anak.
+4. Metode print_inorder(), print_preorder(), dan print_postorder() digunakan untuk melakukan penelusuran in-order, pre- 
+   order, dan post-order pada pohon.
+5. Metode inorder(nodeTree *b), preorder(nodeTree *b), dan postorder(nodeTree *b) merupakan implementasi rekursif dari 
+   penelusuran in-order, pre-order, dan post-order pada pohon.
 Fungsi main() merupakan interaksi dengan pengguna yang menampilkan menu operasi yang dapat dilakukan pada pohon pencarian biner. Pengguna dapat memilih untuk menambahkan node baru, melakukan penelusuran, atau menghapus node dari pohon.
 Program ini memberikan pengguna fleksibilitas untuk memanipulasi pohon pencarian biner dan melakukan operasi dasar sesuai kebutuhan
 
@@ -831,29 +850,3 @@ Graph dan pohon adalah struktur data yang penting dalam pemrograman. Grafik digu
 ## Referensi
 [1] Quinn, R., Advanced C++ Programming Cookbook. United Kingdoms: Packt Publishing Ltd., 2020.
 [2] Zheng Li dkk, C++ Programming. Republic State of China: De Gruyter, 2019.
-```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-
-## Unguided 
-
-### 1. [Soal]
-
-```C++
-#include <iostream>
-using namespace std;
-
-int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
-    return 0;
-}
-```
-#### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
-
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-
-## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
-
-## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
